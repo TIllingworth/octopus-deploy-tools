@@ -18,15 +18,26 @@ namespace OctopusDeployAPITools
         OctopusRepository _repository;
         private List<ReleaseResource> _releases;
 
+        public IEnumerable<ReleaseResource> SelectedReleases { get { return lb_releases.SelectedItems.Cast<ReleaseResource>(); } }
+
         public ReleaseSelector()
         {
             InitializeComponent();
         }
 
-        public void Initialise(OctopusRepository repository)
+        public void Initialise(OctopusRepository repository, SelectionMode selectionMode = SelectionMode.MultiSimple)
         {
             _repository = repository;
 
+            lb_releases.DataSource = _releases;
+            lb_releases.ValueMember = "Id";
+            lb_releases.DisplayMember = "Version";
+        }
+
+        public void ReloadReleases(string projectId)
+        {
+            _releases = _repository.Releases.FindMany(f => f.ProjectId == projectId);
+            lb_releases.DataSource = null;
             lb_releases.DataSource = _releases;
             lb_releases.ValueMember = "Id";
             lb_releases.DisplayMember = "Version";
@@ -36,7 +47,7 @@ namespace OctopusDeployAPITools
         {
             lb_releases.Enabled = false;
 
-            _releases = _repository.Releases.FindMany(f => f.ProjectId == projectId);
+            ReloadReleases(projectId);
 
             lb_releases.Enabled = true;
         }
