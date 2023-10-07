@@ -55,16 +55,29 @@ namespace OctopusDeployAPITools
 
         private void btn_copyrelease_Click(object sender, EventArgs e)
         {
+            if (_selectedRelease.Version.Length == 0)
+            {
+                pow_output.DisplayMessage("No version selected");
+                return;
+            }
+
             SetInputEnabled(false);
 
+            pow_output.DisplayMessage("Beginning copy");
+
             _selectedRelease.Version = tb_version.Text;
-            _selectedRelease.ProjectDeploymentProcessSnapshotId = _repository.DeploymentProcesses.Get(ps_projects.SelectedProjects.First()).LastSnapshotId;
+            _selectedRelease.ProjectDeploymentProcessSnapshotId = null;// _repository.DeploymentProcesses.Get(ps_projects.SelectedProjects.First()).LastSnapshotId;
             _selectedRelease.ProjectVariableSetSnapshotId = null;
             _selectedRelease.LibraryVariableSetSnapshotIds = null;
 
             _repository.Releases.Create(_selectedRelease);
 
+            pow_output.DisplayMessage("Copy complete");
+            pow_output.DisplayMessage("Refreshing releases list");
+
             rs_releases.ReloadReleases(ps_projects.SelectedProjects.First().Id);
+
+            pow_output.DisplayMessage("Refresh complete");
 
             SetInputEnabled(true);
         }

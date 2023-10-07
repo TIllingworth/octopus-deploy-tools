@@ -41,6 +41,7 @@ namespace OctopusDeployAPITools
             lb_releases.DataSource = _releases;
             lb_releases.ValueMember = "Id";
             lb_releases.DisplayMember = "Version";
+            lb_releases.ClearSelected();
         }
 
         public void LoadProjectReleases(string projectId)

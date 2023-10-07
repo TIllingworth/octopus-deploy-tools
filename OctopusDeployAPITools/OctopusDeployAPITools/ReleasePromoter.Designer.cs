@@ -28,117 +28,144 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ps_projects = new ProjectSelector();
-            processOutputWindow1 = new ProcessOutputWindow();
-            es_baseenvironment = new EnvironmentSelector();
-            es_targetenvironment = new EnvironmentSelector();
-            rb_deploynow = new RadioButton();
-            rb_deploylater = new RadioButton();
-            dtp_deploylaterdatetime = new DateTimePicker();
-            tb_baseenvironmentversions = new TextBox();
-            SuspendLayout();
+            this.ps_projects = new OctopusDeployAPITools.ProjectSelector();
+            this.pow_outputmessages = new OctopusDeployAPITools.ProcessOutputWindow();
+            this.es_baseenvironment = new OctopusDeployAPITools.EnvironmentSelector();
+            this.es_targetenvironment = new OctopusDeployAPITools.EnvironmentSelector();
+            this.rb_deploynow = new System.Windows.Forms.RadioButton();
+            this.rb_deploylater = new System.Windows.Forms.RadioButton();
+            this.dtp_deploylaterdatetime = new System.Windows.Forms.DateTimePicker();
+            this.tb_baseenvironmentversions = new System.Windows.Forms.TextBox();
+            this.btn_checkversions = new System.Windows.Forms.Button();
+            this.btn_deployreleases = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
             // ps_projects
             // 
-            ps_projects.Location = new Point(12, 12);
-            ps_projects.Name = "ps_projects";
-            ps_projects.Size = new Size(377, 635);
-            ps_projects.TabIndex = 0;
+            this.ps_projects.Location = new System.Drawing.Point(12, 12);
+            this.ps_projects.Name = "ps_projects";
+            this.ps_projects.Size = new System.Drawing.Size(377, 635);
+            this.ps_projects.TabIndex = 0;
             // 
-            // processOutputWindow1
+            // pow_outputmessages
             // 
-            processOutputWindow1.Dock = DockStyle.Bottom;
-            processOutputWindow1.Location = new Point(0, 1011);
-            processOutputWindow1.Name = "processOutputWindow1";
-            processOutputWindow1.Size = new Size(992, 312);
-            processOutputWindow1.TabIndex = 1;
+            this.pow_outputmessages.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pow_outputmessages.Location = new System.Drawing.Point(0, 1011);
+            this.pow_outputmessages.Name = "pow_outputmessages";
+            this.pow_outputmessages.Size = new System.Drawing.Size(992, 312);
+            this.pow_outputmessages.TabIndex = 1;
             // 
             // es_baseenvironment
             // 
-            es_baseenvironment.Location = new Point(395, 12);
-            es_baseenvironment.Name = "es_baseenvironment";
-            es_baseenvironment.Size = new Size(288, 635);
-            es_baseenvironment.TabIndex = 2;
+            this.es_baseenvironment.Location = new System.Drawing.Point(395, 12);
+            this.es_baseenvironment.Name = "es_baseenvironment";
+            this.es_baseenvironment.Size = new System.Drawing.Size(288, 635);
+            this.es_baseenvironment.TabIndex = 2;
             // 
             // es_targetenvironment
             // 
-            es_targetenvironment.Location = new Point(689, 12);
-            es_targetenvironment.Name = "es_targetenvironment";
-            es_targetenvironment.Size = new Size(288, 635);
-            es_targetenvironment.TabIndex = 3;
+            this.es_targetenvironment.Location = new System.Drawing.Point(689, 12);
+            this.es_targetenvironment.Name = "es_targetenvironment";
+            this.es_targetenvironment.Size = new System.Drawing.Size(288, 635);
+            this.es_targetenvironment.TabIndex = 3;
             // 
             // rb_deploynow
             // 
-            rb_deploynow.AutoSize = true;
-            rb_deploynow.Checked = true;
-            rb_deploynow.Location = new Point(12, 690);
-            rb_deploynow.Name = "rb_deploynow";
-            rb_deploynow.Size = new Size(136, 29);
-            rb_deploynow.TabIndex = 4;
-            rb_deploynow.TabStop = true;
-            rb_deploynow.Text = "Deploy Now";
-            rb_deploynow.UseVisualStyleBackColor = true;
-            rb_deploynow.CheckedChanged += rb_deploynow_CheckedChanged;
+            this.rb_deploynow.AutoSize = true;
+            this.rb_deploynow.Checked = true;
+            this.rb_deploynow.Location = new System.Drawing.Point(12, 690);
+            this.rb_deploynow.Name = "rb_deploynow";
+            this.rb_deploynow.Size = new System.Drawing.Size(136, 29);
+            this.rb_deploynow.TabIndex = 4;
+            this.rb_deploynow.TabStop = true;
+            this.rb_deploynow.Text = "Deploy Now";
+            this.rb_deploynow.UseVisualStyleBackColor = true;
+            this.rb_deploynow.CheckedChanged += new System.EventHandler(this.rb_deploynow_CheckedChanged);
             // 
             // rb_deploylater
             // 
-            rb_deploylater.AutoSize = true;
-            rb_deploylater.Location = new Point(12, 725);
-            rb_deploylater.Name = "rb_deploylater";
-            rb_deploylater.Size = new Size(137, 29);
-            rb_deploylater.TabIndex = 5;
-            rb_deploylater.Text = "Deploy Later";
-            rb_deploylater.UseVisualStyleBackColor = true;
-            rb_deploylater.CheckedChanged += rb_deploylater_CheckedChanged;
+            this.rb_deploylater.AutoSize = true;
+            this.rb_deploylater.Location = new System.Drawing.Point(12, 725);
+            this.rb_deploylater.Name = "rb_deploylater";
+            this.rb_deploylater.Size = new System.Drawing.Size(137, 29);
+            this.rb_deploylater.TabIndex = 5;
+            this.rb_deploylater.Text = "Deploy Later";
+            this.rb_deploylater.UseVisualStyleBackColor = true;
+            this.rb_deploylater.CheckedChanged += new System.EventHandler(this.rb_deploylater_CheckedChanged);
             // 
             // dtp_deploylaterdatetime
             // 
-            dtp_deploylaterdatetime.CustomFormat = "dd/MM/yyyy HH:mm:ss";
-            dtp_deploylaterdatetime.Enabled = false;
-            dtp_deploylaterdatetime.Format = DateTimePickerFormat.Custom;
-            dtp_deploylaterdatetime.Location = new Point(42, 760);
-            dtp_deploylaterdatetime.Name = "dtp_deploylaterdatetime";
-            dtp_deploylaterdatetime.Size = new Size(227, 31);
-            dtp_deploylaterdatetime.TabIndex = 6;
+            this.dtp_deploylaterdatetime.CustomFormat = "dd/MM/yyyy HH:mm:ss";
+            this.dtp_deploylaterdatetime.Enabled = false;
+            this.dtp_deploylaterdatetime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_deploylaterdatetime.Location = new System.Drawing.Point(42, 760);
+            this.dtp_deploylaterdatetime.Name = "dtp_deploylaterdatetime";
+            this.dtp_deploylaterdatetime.Size = new System.Drawing.Size(227, 31);
+            this.dtp_deploylaterdatetime.TabIndex = 6;
             // 
             // tb_baseenvironmentversions
             // 
-            tb_baseenvironmentversions.Location = new Point(395, 653);
-            tb_baseenvironmentversions.Multiline = true;
-            tb_baseenvironmentversions.Name = "tb_baseenvironmentversions";
-            tb_baseenvironmentversions.ReadOnly = true;
-            tb_baseenvironmentversions.Size = new Size(582, 353);
-            tb_baseenvironmentversions.TabIndex = 7;
+            this.tb_baseenvironmentversions.Location = new System.Drawing.Point(395, 693);
+            this.tb_baseenvironmentversions.Multiline = true;
+            this.tb_baseenvironmentversions.Name = "tb_baseenvironmentversions";
+            this.tb_baseenvironmentversions.ReadOnly = true;
+            this.tb_baseenvironmentversions.Size = new System.Drawing.Size(582, 313);
+            this.tb_baseenvironmentversions.TabIndex = 7;
+            // 
+            // btn_checkversions
+            // 
+            this.btn_checkversions.Location = new System.Drawing.Point(395, 653);
+            this.btn_checkversions.Name = "btn_checkversions";
+            this.btn_checkversions.Size = new System.Drawing.Size(257, 34);
+            this.btn_checkversions.TabIndex = 8;
+            this.btn_checkversions.Text = "Check Versions";
+            this.btn_checkversions.UseVisualStyleBackColor = true;
+            this.btn_checkversions.Click += new System.EventHandler(this.btn_checkversions_Click);
+            // 
+            // btn_deployreleases
+            // 
+            this.btn_deployreleases.Location = new System.Drawing.Point(12, 971);
+            this.btn_deployreleases.Name = "btn_deployreleases";
+            this.btn_deployreleases.Size = new System.Drawing.Size(377, 34);
+            this.btn_deployreleases.TabIndex = 9;
+            this.btn_deployreleases.Text = "Deploy Releases";
+            this.btn_deployreleases.UseVisualStyleBackColor = true;
+            this.btn_deployreleases.Click += new System.EventHandler(this.btn_deployreleases_Click);
             // 
             // ReleasePromoter
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            AutoSize = true;
-            ClientSize = new Size(992, 1323);
-            Controls.Add(tb_baseenvironmentversions);
-            Controls.Add(dtp_deploylaterdatetime);
-            Controls.Add(rb_deploylater);
-            Controls.Add(rb_deploynow);
-            Controls.Add(es_targetenvironment);
-            Controls.Add(es_baseenvironment);
-            Controls.Add(processOutputWindow1);
-            Controls.Add(ps_projects);
-            Name = "ReleasePromoter";
-            Text = "Release Promoter";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(992, 1323);
+            this.Controls.Add(this.btn_deployreleases);
+            this.Controls.Add(this.btn_checkversions);
+            this.Controls.Add(this.tb_baseenvironmentversions);
+            this.Controls.Add(this.dtp_deploylaterdatetime);
+            this.Controls.Add(this.rb_deploylater);
+            this.Controls.Add(this.rb_deploynow);
+            this.Controls.Add(this.es_targetenvironment);
+            this.Controls.Add(this.es_baseenvironment);
+            this.Controls.Add(this.pow_outputmessages);
+            this.Controls.Add(this.ps_projects);
+            this.Name = "ReleasePromoter";
+            this.Text = "Release Promoter";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
         private ProjectSelector ps_projects;
-        private ProcessOutputWindow processOutputWindow1;
+        private ProcessOutputWindow pow_outputmessages;
         private EnvironmentSelector es_baseenvironment;
         private EnvironmentSelector es_targetenvironment;
         private RadioButton rb_deploynow;
         private RadioButton rb_deploylater;
         private DateTimePicker dtp_deploylaterdatetime;
         private TextBox tb_baseenvironmentversions;
+        private Button btn_checkversions;
+        private Button btn_deployreleases;
     }
 }

@@ -35,6 +35,7 @@
             this.tb_version = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_copyrelease = new System.Windows.Forms.Button();
+            this.pow_output = new OctopusDeployAPITools.ProcessOutputWindow();
             this.SuspendLayout();
             // 
             // ps_projects
@@ -97,11 +98,20 @@
             this.btn_copyrelease.UseVisualStyleBackColor = true;
             this.btn_copyrelease.Click += new System.EventHandler(this.btn_copyrelease_Click);
             // 
+            // pow_output
+            // 
+            this.pow_output.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pow_output.Location = new System.Drawing.Point(0, 735);
+            this.pow_output.Name = "pow_output";
+            this.pow_output.Size = new System.Drawing.Size(829, 304);
+            this.pow_output.TabIndex = 7;
+            // 
             // ReleaseDuplicator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 1080);
+            this.ClientSize = new System.Drawing.Size(829, 1039);
+            this.Controls.Add(this.pow_output);
             this.Controls.Add(this.btn_copyrelease);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tb_version);
@@ -125,5 +135,6 @@
         private TextBox tb_version;
         private Label label1;
         private Button btn_copyrelease;
+        private ProcessOutputWindow pow_output;
     }
 }

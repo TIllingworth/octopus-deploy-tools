@@ -18,6 +18,8 @@ namespace OctopusDeployAPITools
         OctopusRepository _repository;
         private List<EnvironmentResource> _environments;
 
+        public IEnumerable<EnvironmentResource> SelectedEnvironments { get { return lb_environments.SelectedItems.Cast<EnvironmentResource>(); } }
+
         public EnvironmentSelector()
         {
             InitializeComponent();
