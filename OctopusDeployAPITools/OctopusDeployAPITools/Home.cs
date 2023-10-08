@@ -80,5 +80,10 @@ namespace OctopusDeployAPITools
         {
             new ReleaseDuplicator(_repository).Show();
         }
+
+        private void btn_taskmanager_Click(object sender, EventArgs e)
+        {
+            new TaskManager(_repository).Show();
+        }
     }
 }

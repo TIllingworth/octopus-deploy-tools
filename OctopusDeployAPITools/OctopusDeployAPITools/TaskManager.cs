@@ -37,12 +37,13 @@ namespace OctopusDeployAPITools
         {
             SetInputEnabled(false);
 
-            _activeTasks = _repository.Tasks.GetAllActive();
-
             lb_activetasks.DataSource = null;
+            _activeTasks = _repository.Tasks.GetAllActive();
             lb_activetasks.DataSource = _activeTasks;
             lb_activetasks.ValueMember = "Id";
             lb_activetasks.DisplayMember = "Description";
+
+            lb_activetasks.ClearSelected();
 
             SetInputEnabled(true);
         }
@@ -76,11 +77,10 @@ namespace OctopusDeployAPITools
                 {
                     pow_outputmessages.DisplayMessage(error.Message);
                 }
-                finally
-                {
-                    SetInputEnabled(true);
-                }
             }
+
+            LoadActiveTasks();
+            SetInputEnabled(true);
         }
 
         private void lb_activetasks_Format(object sender, ListControlConvertEventArgs e)
@@ -90,6 +90,11 @@ namespace OctopusDeployAPITools
             var completed = ((TaskResource)e.ListItem).Completed;
 
             e.Value = startTime + "    " + completed + "    " + description;
+        }
+
+        private void btn_refreshtasklist_Click(object sender, EventArgs e)
+        {
+            LoadActiveTasks();
         }
     }
 }
