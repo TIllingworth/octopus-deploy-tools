@@ -5,8 +5,6 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OctopusDeployAPITools", "OctopusDeployAPITools\OctopusDeployAPITools.csproj", "{6BC9ECCB-3B46-4541-9900-A6B5E67C1397}"
 EndProject
-Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "OctopusDeployAPITools.package", "OctopusDeployAPITools.package\OctopusDeployAPITools.package.wapproj", "{DB058D8E-BE15-429C-B8B7-47CD08666163}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,36 +39,6 @@ Global
 		{6BC9ECCB-3B46-4541-9900-A6B5E67C1397}.Release|x64.Build.0 = Release|Any CPU
 		{6BC9ECCB-3B46-4541-9900-A6B5E67C1397}.Release|x86.ActiveCfg = Release|Any CPU
 		{6BC9ECCB-3B46-4541-9900-A6B5E67C1397}.Release|x86.Build.0 = Release|Any CPU
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Debug|ARM.ActiveCfg = Debug|ARM
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Debug|ARM.Build.0 = Debug|ARM
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Debug|ARM.Deploy.0 = Debug|ARM
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Debug|ARM64.ActiveCfg = Debug|ARM64
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Debug|ARM64.Build.0 = Debug|ARM64
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Debug|ARM64.Deploy.0 = Debug|ARM64
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Debug|x64.ActiveCfg = Debug|x64
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Debug|x64.Build.0 = Debug|x64
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Debug|x64.Deploy.0 = Debug|x64
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Debug|x86.ActiveCfg = Debug|x86
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Debug|x86.Build.0 = Debug|x86
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Debug|x86.Deploy.0 = Debug|x86
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Release|ARM.ActiveCfg = Release|ARM
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Release|ARM.Build.0 = Release|ARM
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Release|ARM.Deploy.0 = Release|ARM
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Release|ARM64.ActiveCfg = Release|ARM64
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Release|ARM64.Build.0 = Release|ARM64
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Release|ARM64.Deploy.0 = Release|ARM64
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Release|x64.ActiveCfg = Release|x64
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Release|x64.Build.0 = Release|x64
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Release|x64.Deploy.0 = Release|x64
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Release|x86.ActiveCfg = Release|x86
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Release|x86.Build.0 = Release|x86
-		{DB058D8E-BE15-429C-B8B7-47CD08666163}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
