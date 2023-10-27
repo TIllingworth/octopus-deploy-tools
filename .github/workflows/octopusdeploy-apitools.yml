@@ -20,7 +20,7 @@ jobs:
 
     env:
       Solution_Name: OctopusDeployAPITools\OctopusDeployAPITools.sln                         # Replace with your solution name, i.e. MyWpfApp.sln.
-      Output_Directory: OctopusDeployAPITools\OctopusDeployAPITools\bin\${{ matrix.configuration }}\net6.0-windows
+      Output_Directory: OctopusDeployAPITools\Output
 
     steps:
     - name: Checkout
@@ -45,8 +45,8 @@ jobs:
       uses: microsoft/setup-msbuild@v1.1
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
-    - name: Restore the application
-      run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
+    - name: Build the application
+      run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration /p:OutputPath=$env:Output_Directory
       env:
         Configuration: ${{ matrix.configuration }}
 
