@@ -47,6 +47,7 @@
             // 
             // rs_releases
             // 
+            this.rs_releases.Enabled = false;
             this.rs_releases.Location = new System.Drawing.Point(433, 12);
             this.rs_releases.Name = "rs_releases";
             this.rs_releases.Size = new System.Drawing.Size(384, 441);
@@ -64,6 +65,7 @@
             // 
             // btn_selectrelease
             // 
+            this.btn_selectrelease.Enabled = false;
             this.btn_selectrelease.Location = new System.Drawing.Point(433, 459);
             this.btn_selectrelease.Name = "btn_selectrelease";
             this.btn_selectrelease.Size = new System.Drawing.Size(183, 34);
@@ -74,6 +76,7 @@
             // 
             // tb_version
             // 
+            this.tb_version.Enabled = false;
             this.tb_version.Location = new System.Drawing.Point(12, 600);
             this.tb_version.Name = "tb_version";
             this.tb_version.Size = new System.Drawing.Size(253, 31);
@@ -90,6 +93,7 @@
             // 
             // btn_copyrelease
             // 
+            this.btn_copyrelease.Enabled = false;
             this.btn_copyrelease.Location = new System.Drawing.Point(12, 637);
             this.btn_copyrelease.Name = "btn_copyrelease";
             this.btn_copyrelease.Size = new System.Drawing.Size(183, 34);

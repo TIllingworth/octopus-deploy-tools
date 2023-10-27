@@ -40,7 +40,11 @@ namespace OctopusDeployAPITools
         {
             SetInputEnabled(false);
             rs_releases.LoadProjectReleases(ps_projects.SelectedProjects.First().Id);
-            SetInputEnabled(true);
+            
+            rs_releases.Enabled = true;
+            ps_projects.Enabled = true;
+            btn_loadreleases.Enabled = true;
+            btn_selectrelease.Enabled = true;
         }
 
         private void btn_selectrelease_Click(object sender, EventArgs e)
